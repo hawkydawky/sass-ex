@@ -1,0 +1,109 @@
+* {
+    margin: 5px;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+$color-red: red;
+$color-green: green;
+$color-blue: blue;
+
+div {
+    display: flex;
+    flex-direction: column;
+}
+
+section {
+    display: flex;
+}
+
+h1 {
+    text-decoration: underline;
+}
+article {
+    margin: 0;
+    font-size: 12px;
+}
+
+._color {
+    &_red {
+        color: $color-red;
+    }
+
+    &_green {
+        color: $color-green;
+    }
+
+    &_blue {
+        color: $color-blue;
+    }
+}
+
+.border_red {
+    display: flex;
+    text-align: center;
+    border: 1px solid $color-red;
+        &_color {
+            
+            &_red {
+                color: $color-red;
+                @extend .border_red
+            }
+
+            &_green {
+                color: $color-green;
+                @extend .border_red
+            }
+
+            &_blue {
+                color: $color-blue;
+                @extend .border_red
+            }
+        }
+}
+
+.border_green {
+    display: flex;
+    text-align: center;
+    border: 1px solid $color-green;
+        &_color {
+            
+            &_red {
+                color: $color-red;
+                @extend .border_green
+            }
+
+            &_green {
+                color: $color-green;
+                @extend .border_green
+            }
+
+            &_blue {
+                color: $color-blue;
+                @extend .border_green
+            }
+        }
+}
+
+.border_blue {
+    display: flex;
+    text-align: center;
+    border: 1px solid $color-blue;
+        &_color {
+            
+            &_red {
+                color: $color-red;
+                @extend .border_blue
+            }
+
+            &_green {
+                color: $color-green;
+                @extend .border_blue
+            }
+
+            &_blue {
+                color: $color-blue;
+                @extend .border_blue
+            }
+        }
+}

@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$color-red: red;
+$color-green: green;
+$color-blue: blue;
+
+._color {
+    &_red {
+        color: $color-red;
+    }
+
+    &_green {
+        color: $color-green;
+    }
+
+    &_blue {
+        color: $color-blue;
+    }
+}
+
+.border {
+    &_red {
+        border: 1px solid $color-red;
+        &_color {
+            @extend .border;
+        }
+    }
+
+    &_green {
+        border: 1px solid $color-green;
+        &_color {
+            @extend ._color;
+        }
+    }
+
+    &_blue {
+        border: 1px solid $color-blue;
+        &_color {
+            @extend ._color;
+        }
+    }
+}

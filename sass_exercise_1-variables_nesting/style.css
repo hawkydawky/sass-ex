@@ -1,0 +1,80 @@
+* {
+  margin: 5px;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+}
+
+section {
+  display: flex;
+}
+
+h1 {
+  text-decoration: underline;
+}
+
+article {
+  margin: 0;
+  font-size: 12px;
+}
+
+._color_red {
+  color: red;
+}
+._color_green {
+  color: green;
+}
+._color_blue {
+  color: blue;
+}
+
+.border_red, .border_red_color_blue, .border_red_color_green, .border_red_color_red {
+  display: flex;
+  text-align: center;
+  border: 1px solid red;
+}
+.border_red_color_red {
+  color: red;
+}
+.border_red_color_green {
+  color: green;
+}
+.border_red_color_blue {
+  color: blue;
+}
+
+.border_green, .border_green_color_blue, .border_green_color_green, .border_green_color_red {
+  display: flex;
+  text-align: center;
+  border: 1px solid green;
+}
+.border_green_color_red {
+  color: red;
+}
+.border_green_color_green {
+  color: green;
+}
+.border_green_color_blue {
+  color: blue;
+}
+
+.border_blue, .border_blue_color_blue, .border_blue_color_green, .border_blue_color_red {
+  display: flex;
+  text-align: center;
+  border: 1px solid blue;
+}
+.border_blue_color_red {
+  color: red;
+}
+.border_blue_color_green {
+  color: green;
+}
+.border_blue_color_blue {
+  color: blue;
+}
+
+/*# sourceMappingURL=style.css.map */
