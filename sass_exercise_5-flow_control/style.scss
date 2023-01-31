@@ -1,0 +1,101 @@
+@use "module-function.scss" as f;
+@use "module-variables.scss" as v;
+
+* {
+
+    margin: v.m(0);
+    padding: v.p(0);
+    box-sizing: border-box;
+    text-align: center;
+}
+
+@mixin card($border-color, $color, $border-margin: 0px, $border-padding: 0px, $f-size: f.px-to-rem(16)) {
+    border: 1px solid $border-color;
+    color: $color;
+    margin: $border-margin;
+    padding: $border-padding;
+    font-size: $f-size;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+}
+
+section {
+    display: flex;
+}
+
+%h {
+    color: v.$g;
+}
+
+h1 {
+    @extend %h;
+    text-decoration: v.$b underline;
+    margin-bottom: 10px;
+}
+
+h2 {
+    @extend %h;
+    padding: 1rem;
+    border: 1px solid v.$r;
+    margin: 10px;
+    width:fit-content;
+    align-self: center;
+}
+
+.border-red-color-green {
+    @include card(v.$r, v.$g, v.m(10px), v.p(15px));
+}
+
+.border-green-color-blue {
+    @include card(v.$g, v.$b, v.m(0), v.p(15px));
+}
+
+.border-green-color-red {
+    @include card(v.$g, v.$r, v.m(0), v.p(15px));
+}
+
+.border-blue-color-green {
+    @include card(v.$b, v.$g, v.m(0), v.p(20px), f.px-to-rem(24));
+    margin-top: 10px;
+    flex: 1;
+}
+
+.box-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+%box {
+    width: f.px-to-rem(45);
+    height: f.px-to-rem(45);
+    display: flex;
+    border: 1px solid v.$r;
+    text-align: left;
+    margin-top: 10px;
+}
+
+$boxes: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19;
+$remboxes: 1, 2, 3;
+
+@each $remnum in $remboxes {
+    .fs-#{$remnum}rem {
+        @extend %box;
+        font-size: #{$remnum}rem;
+    }
+}
+
+@for $num from 1 through 20 {
+        .box-section div:nth-child(#{$num}) {
+        background-color: f.color(white, -5%*$num);
+        color: f.color(white, -5%*$num, true);
+        }
+    }
+
+.box-section div:nth-child(10) {
+    background-color: blue;
+    color: red;
+    font-size: 2rem;
+}

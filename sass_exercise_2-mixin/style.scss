@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+@mixin card($border-color, $color, $border-margin: 0px, $border-padding: 0px, $f-size: 1rem) {
+    border: 1px solid $border-color;
+    color: $color;
+    margin: $border-margin;
+    padding: $border-padding;
+    font-size: $f-size;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+}
+
+section {
+    display: flex;
+}
+
+h1 {
+    text-decoration: blue underline;
+    margin-bottom: 10px
+}
+
+.border-red-color-green {
+    @include card(red, green, 10px, 10px);
+}
+
+.border-green-color-blue {
+    @include card(green, blue, 0px, 10px);
+}
+
+.border-green-color-red {
+    @include card(green, red, 0px, 10px);
+}
+
+.border-blue-color-green {
+    @include card(blue, green, 0, 15px, 24px);
+    margin-top: 10px;
+}

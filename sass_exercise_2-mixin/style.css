@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+}
+
+section {
+  display: flex;
+}
+
+h1 {
+  text-decoration: blue underline;
+  margin-bottom: 10px;
+}
+
+.border-red-color-green {
+  border: 1px solid red;
+  color: green;
+  margin: 10px;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+.border-green-color-blue {
+  border: 1px solid green;
+  color: blue;
+  margin: 0px;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+.border-green-color-red {
+  border: 1px solid green;
+  color: red;
+  margin: 0px;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+.border-blue-color-green {
+  border: 1px solid blue;
+  color: green;
+  margin: 0;
+  padding: 15px;
+  font-size: 24px;
+  margin-top: 10px;
+}
+
+/*# sourceMappingURL=style.css.map */

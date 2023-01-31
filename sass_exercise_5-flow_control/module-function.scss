@@ -1,0 +1,17 @@
+@use "sass:color";
+
+@function px-to-rem($px) {
+    @return calc($px/16) + rem;
+}
+
+@function color($color, $multiplier, $invert: false){
+    @if $invert {
+        $adjusted: color.adjust($color, $lightness: $multiplier);
+        @return color.invert($adjusted);
+    }
+    @else {
+        $adjusted: color.adjust($color, $lightness: $multiplier);
+        @return $adjusted;
+    }
+
+}

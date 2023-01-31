@@ -1,0 +1,11 @@
+$r: red;
+$g: green;
+$b: blue;
+
+@function m($m) {
+    @return $m;
+}
+
+@function p($p) {
+    @return $p;
+}
